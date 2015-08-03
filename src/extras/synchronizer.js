@@ -50,7 +50,7 @@ Dygraph.synchronize = function(/* dygraphs..., opts */) {
   var prevCallbacks = [];
 
   var parseOpts = function(obj) {
-    if (!(obj instanceof Object)) {
+    if (typeof(obj) !== 'object' && !(obj instanceof Object)) {
       throw 'Last argument must be either Dygraph or Object.';
     } else {
       for (var i = 0; i < OPTIONS.length; i++) {
